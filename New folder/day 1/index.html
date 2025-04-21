@@ -1,0 +1,110 @@
+<!--today is 13 april 2025 or aj mene css ko scratse build karna sheka r inshallah jald hi me khud saa css ko master karasako ga taky mujhe baad me styling me problem naho     -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #01e37f;
+        }
+        .my-card{
+            width: 300px;
+            /* height: 550px; */
+            background-color: white;
+            /* color: white; */
+            padding: 10px 20px;
+            border: 3px white solid;
+            border-radius: 30px;
+            box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s; /* Added transition for hover effect */
+        }
+        .my-card:hover {
+            transform: scale(1.02); /* Added hover effect */
+        }
+        .my-card > img {
+            width: 80%;
+            height: 80%;
+            margin: 0 auto;
+            padding: auto;
+            display: block;
+            
+        }
+        .my-card > h1 {
+            font-size: 30px;
+            color: #4c4c4c;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .my-card > p {
+            font-size: 15px;
+            color: #a6a6a6;
+        }
+        .my-card > p > .discount {
+            color: #ff3f40;
+            font-size: 20px;
+        }
+        .my-card > del {
+            color: #ff3f40;
+            font-size: 20px;
+        }
+        #actual-price {
+            font-size: 30px;
+            color: #01e37f;
+        }
+        .discount {
+            color: #ff3f40;
+        }
+        .my-card > ul {
+            color: #a6a6a6;
+            font: 1em sans-serif;
+            list-style:  square ;
+            
+        }
+        .primary-button{
+            background-color: #fa1e1e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s; /* Added transition for hover effect */
+        }
+        .secondary-button{
+            background-color: #01e37f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s; /* Added transition for hover effect */
+        }
+        .primary-button:hover,.secondary-button:hover {
+            transform: scale(1.05); /* Added hover effect */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="my-card">
+        <img src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png" alt="">
+        <h1>My Product Card</h1>
+        <p ><span id="actual-price"> 300$</span>  <span class="discount">-50%</span> <del>600$</del></p>
+        <p></p>
+        <p>Here are the details of my product:</p>
+        <ul>
+            <li>ABC</li>
+            <li>DEF</li>
+            <li>GHI</li>
+        </ul>
+        <button class="primary-button">Add to cart</button>
+        <button class="secondary-button">Buy now</button>
+    </div>
+    
+</body>
+</html>

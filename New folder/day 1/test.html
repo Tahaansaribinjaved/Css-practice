@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>CSS Display Property Practice</title>  
+    <!-- <link rel="stylesheet" href="styles.css">   -->
+     <style>
+        /* styles.css */  
+
+h1 {  
+    text-align: center;  
+}  
+
+.block-example {  
+    display: block;  
+    width: 100%;  
+    background-color: lightblue;  
+    padding: 20px;  
+    margin: 10px 0;  
+}  
+
+.inline-example {  
+    display: inline;  
+    background-color: lightgreen;  
+    padding: 10px;  
+}  
+
+.inline-block-example {  
+    display: inline-block;  
+    width: 150px;  
+    height: 100px;  
+    background-color: lightcoral;  
+    margin: 10px;  
+    text-align: center;  
+    line-height: 100px; /* Vertically center text */  
+}  
+
+.hidden {  
+    display: none;  
+}  
+
+.visible {  
+    display: block;  
+}  
+     </style>
+</head>  
+<body>  
+    <h1>CSS Display Property Practice</h1>  
+    
+    <div class="block-example">Block Element</div>  
+    
+    <span class="inline-example">Inline Element</span>  
+    
+    <div class="inline-block-example">Inline-Block Element 1</div>  
+    <div class="inline-block-example">Inline-Block Element 2</div>  
+    
+    <button id="toggle">Toggle Visibility</button>  
+    <div id="hidden-div" class="hidden">This div will hide and show.</div>  
+    
+    <script > 
+        // script.js  
+
+document.getElementById('toggle').addEventListener('click', function() {  
+    const hiddenDiv = document.getElementById('hidden-div');  
+    if (hiddenDiv.style.display === 'none' || hiddenDiv.style.display === '') {  
+        hiddenDiv.style.display = 'block';  
+    } else {  
+        hiddenDiv.style.display = 'none';  
+    }  
+});  
+    </script>  
+</body>  
+</html>  

@@ -1,0 +1,33 @@
+
+#header{
+    background-color: rgba(255,0,0,0.5);
+    color: white;
+    height: 90px;
+}
+#logo{
+    font-weight: 300;
+    font-size: larger;
+    color: #ff3c00;
+}
+.nav-link{
+    padding-right: 150px;
+    /* padding-top: 50px; */
+    padding-bottom: 0;
+}
+
+div{
+    height: 100px;
+    /* width: 100px; */
+    border: 2px blue solid;
+
+}
+
+#content{
+    background-color: rgba(0,255,0,0.5);
+    height: auto;
+    min-height: 300px;
+    max-height: 600px;
+}
+#footer{
+    background-color: rgba(0,0,255,0.5);
+}

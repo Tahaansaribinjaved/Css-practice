@@ -1,0 +1,13 @@
+div{
+    /* background-color: black; */
+    font-size: larger;
+    text-align: center;
+    color: black;
+    height: 200px;
+    width: 200px;
+    background-image: url("nature.jpg");
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

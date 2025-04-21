@@ -1,0 +1,23 @@
+/* div{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 3px solid black;
+    border-radius: 50%;
+} */
+
+div{
+    background-color: black;
+    color: white;
+    height: 90px;
+}
+#logo{
+    font-weight: 300;
+    font-size: larger;
+    color: #ff3c00;
+}
+.nav-link{
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 0;
+}
