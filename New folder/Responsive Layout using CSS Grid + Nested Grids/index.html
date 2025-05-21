@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive Layout using CSS Grid + Nested Grids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+  <!-- Section 1: Hero Area -->
+  <section class="hero">
+    <h1>Welcome to My Site</h1>
+    <div class="buttons">
+      <button>Learn More</button>
+      <button>Get Started</button>
+    </div>
+  </section>
+
+  <!-- Section 2: Cards -->
+  <section class="cards-grid">
+    <!-- Card 1 -->
+    <div class="card">
+      <h2>Card 1</h2>
+      <p>This card has nested grid.</p>
+      <div class="card-inner-grid">
+        <img src="../grid layout/profile-svgrepo-com.svg" alt="Image" />
+        <p>Additional info</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h2>Card 2</h2>
+      <p>Simple card content</p>
+      <div class="card-inner-grid">
+        <img src="../grid layout/profile-svgrepo-com.svg" alt="Image" />
+        <p>Additional info</p>
+    </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <h2>Card 3</h2>
+      <p>Another card content</p>
+      <div class="card-inner-grid">
+        <img src="../grid layout/profile-svgrepo-com.svg" alt="Image" />
+        <p>Additional info</p>
+    </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

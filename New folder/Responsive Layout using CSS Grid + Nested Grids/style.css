@@ -1,0 +1,109 @@
+:root {
+  --color-primary: #F4E04D;    /* First color */
+  --color-secondary: #F2ED6F;  /* Second color */
+  --color-tertiary: #CEE397;     /* Third color */
+  --color-quaternary: #8DB1AB;   /* Fourth color */
+  --color-quinary: #587792;      /* Fifth color */
+}
+body {
+  /* color: black; */
+  color: var(--color-quinary);
+  background: linear-gradient(to right , var(--color-primary) , var(--color-quinary) ) ;
+}
+.border {
+  border: 2px solid var(--color-quaternary);
+}
+.container {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+.hero {
+  display: grid;
+  justify-items: center; /* center content horizontally */
+  text-align: center;
+  background: linear-gradient(to right, var(--color-quaternary), var(--color-tertiary));
+  color: #fff; /* or a darker shade for contrast */
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+.hero:hover {
+  background: linear-gradient(to right, var(--color-tertiary), var(--color-quaternary));
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+.hero h1 {
+  margin-bottom: 20px;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons button {
+  padding: 10px 20px;
+   background: linear-gradient(to right, var(--color-secondary), var(--color-quinary));
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons button:hover {
+background: linear-gradient(to right, var(--color-quinary), var(--color-secondary));
+transform: scale(1.05);
+transition: all 0.3s ease;
+}
+.buttons button:focus {
+  outline: 3px solid var(--color-quaternary);
+}
+.card {
+    display: grid;
+    justify-items: center;  
+}
+.cards-grid {
+  display: grid;
+  justify-items: center;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cards-grid .card {
+  width: 100%;
+  max-width: 300px; /* set a max width for the cards */
+  background: linear-gradient(to right, var(--color-quaternary), var(--color-tertiary));
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-inner-grid h2 {
+  color: var(--color-quinary);
+}
+.card-inner-grid {
+    display: grid;
+    justify-items: center;
+  grid-template-rows: auto 1fr; /* image on top, text below */
+  gap: 10px;
+}
+.card-inner-grid img {
+  width: 50%; /* or 30% as you have now, depending on preference */
+  max-width: 150px; /* ensures images don't get too large */
+  height: auto;
+}
+.cards-grid .card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+ .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: all 0.3 ease;
+  background: linear-gradient(to right, var(--color-tertiary), var(--color-quaternary));
+}
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* stack cards vertically on small screens */
+  }
+  .hero {
+    padding: 20px 10px;
+  }
+}
