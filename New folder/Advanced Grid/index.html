@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Dashboard Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      .container {
+       
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar main";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr;
+        height: 100vh;
+      }
+      .header {
+        grid-area: header;
+        height: 60px;
+        width: 100%;
+        background: linear-gradient(to right, #DB5A42, #FFD275);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5em;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 2px solid #ccc;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+      }
+        .header nav {
+            width: 100%;
+        }   
+        .header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+        .header nav ul li {
+            cursor: pointer;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        .header nav ul li:hover {
+            background-color: #A8A2C0;
+            border-radius: 5px;
+        }
+      .sidebar {
+        grid-area: sidebar;
+        background: linear-gradient(to right, #E3A587, #DB5A42);
+        padding: 20px;
+        color: white;
+        font-size: 1.2em;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        /* border-right: 2px solid #ccc; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: sticky;
+        top: 60px;
+        z-index: 900;
+        overflow-y: auto;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        /* border-radius: 8px; */
+        /* margin-right: 20px; */
+        /* font-size: 1.5em; */
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        /* border: 5px solid #ccc; */
+
+      }
+      .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: repeat(auto-fill, minmax(150px,1fr));
+        gap: 20px;
+        background: linear-gradient(to right, #FFD275, #E8AE68);
+        padding: 20px;
+        font-size: 1.2em;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        overflow-y: scroll;
+      }
+        .card {
+            background: linear-gradient(to right, #E3A587, #A57F60);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+
+            /* border: 5px solid #ccc; */
+
+            height: 400px;
+        }
+        .card:hover {
+            background: linear-gradient(to right,  #A57F60,#E3A587);
+            transition: background-color 0.3s ease;
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1.05);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="header">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li>Blog</li>
+                    <li>Portfolio</li>
+                    <li>Testimonials</li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <h1>Sidebar</h1>
+            <p>Content for the sidebar</p>
+            <p>Additional content</p>
+            <p>More content</p>
+            <p>Even more content</p>
+        </div>
+        <div class="main">
+            <div class="card">
+                <h1>Card 1</h1>
+                <p>Content for card 1</p>
+            </div>
+            <div class="card">
+                <h1>Card 2</h1>
+                <p>Content for card 2</p>
+            </div>
+            <div class="card">
+                <h1>Card 3</h1>
+                <p>Content for card 3</p>
+            </div>
+            <div class="card">
+                <h1>Card 4</h1>
+                <p>Content for card 4</p>
+            </div>
+             <div class="card">
+                <h1>Card 5</h1>
+                <p>Content for card 5</p>
+            </div>
+            <div class="card">
+                <h1>Card 6</h1>
+                <p>Content for card 6</p>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
