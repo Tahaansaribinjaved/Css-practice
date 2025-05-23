@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive Header with Toggle Menu</title>
+<!-- Poppins font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+<!-- Font Awesome CDN for menu icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- <link rel="stylesheet" href="style2.css"> -->
+<style>
+    
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar styles */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    grid-column: 1;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+     grid-column: 2;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #575757;
+}
+
+/* Menu toggle icon */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    justify-self: end;
+    grid-column: 3;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .navbar {
+        /* grid-template-columns: 1fr 1fr; */
+    }
+    .logo{
+        grid-column: 1;
+    }
+    .menu-toggle {
+        display: flex; /* Show toggle icon on mobile */
+        align-items: center;
+        justify-content: flex-end;
+        padding: 10px 0;
+    }
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links li a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+    /* Show menu when active */
+    .navbar.active .nav-links {
+        display: flex;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <img src="https://via.placeholder.com/50" alt="Logo" />
+      MyLogo
+    </div>
+    <!-- Hamburger icon -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Font Awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+<script>
+  // Toggle menu on mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
