@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bootstrap Navbars Showcase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    /* Sticky Navbar */
+    .sticky-top {
+      top: 0;
+      z-index: 1020;
+    }
+
+    /* Sidebar styling */
+    .sidebar {
+      height: 100vh;
+      width: 250px;
+      background-color: #f8f9fa;
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <!-- Navbar will go here -->
+  <nav class="navbar navbar-expand-md     bg-success-subtle shadow-sm ">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary fs-4 " href="#">MyBrand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+    <div class="collapse navbar-collapse fs-5 text-center" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- Spacer -->
+  <div>
+    <br>
+
+    <!-- 2. Logo + Menu + Search + Cart -->
+    <nav class="navbar navbar-expand-lg bg-light mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MyShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarWithSearch" aria-controls="navbarWithSearch"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarWithSearch">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+          </ul>
+          <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+          <a class="btn btn-primary" href="#"><i class="bi bi-cart"></i> Cart</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 3. Sticky Navbar on Scroll -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">StickyNav</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#stickyNavbar" aria-controls="stickyNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="stickyNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 4. Navbar with Dropdown Menus -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">DropdownNav</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#dropdownNavbar" aria-controls="dropdownNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="dropdownNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Phones</a></li>
+                <li><a class="dropdown-item" href="#">Laptops</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 5. Responsive Navbar (Hamburger) -->
+    <nav class="navbar navbar-expand-md navbar-light  bg-warning mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MobileNav</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mobileNavbar" aria-controls="mobileNavbar"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobileNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam consequatur ratione molestiae accusamus impedit at! Dignissimos vitae temporibus ducimus adipisci repellendus nesciunt, ratione soluta, maiores explicabo molestias, consequuntur excepturi quasi?
+    Labore, eius hic exercitationem nam aliquam ipsam dicta incidunt sint tempora, fugiat vero expedita ipsa dolor earum cum natus. Pariatur fuga in doloribus sapiente illum iusto asperiores, obcaecati qui possimus!
+    Quia unde quae veniam maxime, temporibus est delectus debitis rerum cupiditate expedita iure recusandae, necessitatibus laborum quod harum odio? Illo, minus sed reprehenderit porro vel id amet adipisci quidem omnis.
+    Explicabo error dicta modi, esse ipsum dignissimos perspiciatis debitis cupiditate aliquam! Iste beatae, vero totam aliquid hic quo, optio reprehenderit accusantium consectetur dignissimos accusamus cum sed officiis ab. Perspiciatis, laboriosam.
+    Sequi qui numquam fugiat dolorum maiores dolor expedita sed, quasi laudantium. Quibusdam omnis repellendus possimus praesentium perspiciatis, iusto natus in laudantium, quae sapiente odio expedita nemo labore, debitis assumenda numquam.
+    Ipsam quod dolores odio repellendus hic reiciendis perferendis, ratione quae omnis quas porro quaerat minus rem. Iure provident dicta odit sequi, inventore voluptatibus delectus asperiores exercitationem esse, quis molestias in.
+    Pariatur ab repudiandae, consectetur consequatur labore quisquam. Voluptas aut facere ut ea, nihil laborum repellat fuga adipisci maiores culpa. Sed qui doloremque cum deserunt accusantium earum. Repellat cupiditate doloremque eum?
+    Veniam voluptatum recusandae, asperiores qui voluptas ipsum dolorum sunt nemo incidunt accusamus? Quia eius a iusto, minima minus eos aperiam cupiditate illum ad ullam voluptas eveniet unde dicta perspiciatis at!
+    Distinctio aliquam fugit odio tenetur consectetur voluptatum error dignissimos praesentium molestiae repellat culpa assumenda corrupti, quo ut facere quasi, aliquid doloribus accusamus aut molestias blanditiis! Assumenda dolorum eveniet eaque aspernatur.
+    Porro nihil obcaecati ex. Itaque quidem corporis optio nesciunt maiores modi est tenetur quis vero amet eaque, voluptatum minus ratione ex iure at ea praesentium dolore quaerat sapiente. Nesciunt, dolore?
+    Tempore, aperiam tenetur! Et, earum quidem accusantium nihil ab voluptatum officiis aut perferendis ad, iusto dolorem tenetur aperiam tempora autem voluptates obcaecati blanditiis architecto. Suscipit, ratione quisquam. Delectus, autem modi!
+    Temporibus sint reprehenderit voluptas, iste esse quam totam modi ullam minus id corrupti minima labore ducimus numquam et voluptatem dolor, animi enim atque at repellendus. Eligendi velit nemo totam ab?
+    Nisi cumque, ab quaerat consequuntur est iure voluptatem nesciunt ex vel laborum, quisquam blanditiis temporibus et nobis quos. Magni ut voluptatum, voluptates libero accusantium itaque placeat. Labore totam dicta deserunt!
+    Consectetur id cum nihil, aliquam tenetur deserunt et obcaecati perferendis officiis, omnis, veniam distinctio quae? Blanditiis debitis repellat, iusto veritatis voluptatum officia beatae consectetur nobis, accusantium iste ad est temporibus.
+    Tempora rem excepturi numquam ea perferendis aspernatur, quas velit, odit dolor facilis soluta consectetur officiis non. Rem labore nam quia est dignissimos, omnis deserunt in itaque dolorem quae consequuntur nemo?
+    Quae architecto corporis fugit commodi earum reprehenderit in vero libero veniam dolore perspiciatis exercitationem, maiores dolorem quidem distinctio, incidunt mollitia facere rerum excepturi quibusdam! Excepturi deserunt odit maiores rerum ipsa.
+    Inventore quibusdam, laudantium eius nihil delectus culpa aspernatur perspiciatis aliquam eum recusandae illum, dolorem sed numquam eaque dolores? Mollitia consectetur quos molestias fugit illum reprehenderit odit nisi delectus deserunt! Distinctio!
+    Amet sunt dolor minima consequatur quis dolore aut iure necessitatibus laborum adipisci fuga quasi eius, nostrum voluptate beatae facilis. Consectetur id blanditiis ea. Unde dolorum officia consectetur ea quo sint?
+    Commodi ullam quaerat fugiat quos dolores fuga modi perspiciatis nisi natus, et soluta facilis tempora hic dolore, fugit dolor molestias repudiandae officiis reiciendis. Fuga, repellat? Dolorem odit explicabo animi rem.
+    Ipsam, suscipit ducimus. Ipsam repellendus laudantium distinctio amet quos tempora saepe doloremque dolor nobis? Perferendis necessitatibus blanditiis enim animi temporibus esse harum, laudantium deleniti ipsa. Id quos omnis quas culpa.
+    Soluta quis doloribus impedit est dolorem voluptates ullam assumenda, atque eum cupiditate magni fugit neque accusamus dolor ea asperiores id hic explicabo perferendis, distinctio labore suscipit error consequuntur nostrum. Aut.
+    Doloremque repellat iste obcaecati suscipit neque deserunt sapiente ex a, molestiae esse ipsa nam officiis? Quidem porro voluptas in dolorem, deleniti totam ab fugiat voluptate illum? Ratione iste facilis officia.
+    Quidem corporis ipsa, explicabo velit architecto, qui accusantium, debitis aperiam similique rem sint. Modi impedit id dignissimos, ex maxime repellendus eligendi eius nobis sed omnis sunt quidem aperiam ad nostrum.
+  </p>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

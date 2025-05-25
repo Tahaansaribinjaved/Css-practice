@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom CSS Navbars</title>
+  <style>
+    :root {
+      --primary: #1e90ff;
+      --secondary: #333;
+      --light: #fff;
+      --dark: #000;
+      --accent: #ff6347;
+      --font: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font);
+    }
+
+    body {
+      background-color: #f5f5f5;
+      padding-bottom: 100px;
+    }
+
+    /* Reusable styles */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: var(--light);
+    }
+
+    .navbar a {
+      color: var(--light);
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: var(--accent);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      background: var(--light);
+      height: 3px;
+      width: 25px;
+      margin: 3px 0;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    /* 1. Basic Navbar */
+    .navbar-1 {
+      background: var(--primary);
+    }
+
+    /* 2. Sticky Navbar */
+    .navbar-2 {
+      position: sticky;
+      top: 0;
+      background: var(--secondary);
+      z-index: 999;
+    }
+
+    /* 3. Navbar with Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: var(--light);
+      color: var(--dark);
+      top: 100%;
+      left: 0;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: var(--dark);
+      margin: 0.5rem 0;
+    }
+
+    .dropdown-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* 4. Search + Cart Navbar */
+    .navbar-4 input[type="text"] {
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
+
+    .navbar-4 .btn {
+      background: var(--accent);
+      border: none;
+      color: var(--light);
+      padding: 5px 15px;
+      cursor: pointer;
+    }
+
+    /* 5. Animated Navbar */
+    .navbar-5 {
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar 1: Basic -->
+  <nav class="navbar navbar-1">
+    <div class="logo">Logo</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Navbar 2: Sticky -->
+  <nav class="navbar navbar-2">
+    <div class="logo">Sticky</div>
+    <div class="menu">
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Navbar 3: With Dropdown -->
+  <nav class="navbar navbar-1">
+    <div class="logo">Dropdown</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#">Products</a>
+        <div class="dropdown-menu">
+          <a href="#">Laptops</a>
+          <a href="#">Phones</a>
+          <a href="#">Accessories</a>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Navbar 4: Search + Cart -->
+  <nav class="navbar navbar-4">
+    <div class="logo">Shop</div>
+    <div class="menu">
+      <input type="text" placeholder="Search products">
+      <button class="btn">Cart</button>
+    </div>
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Navbar 5: Animated -->
+  <nav class="navbar navbar-5">
+    <div class="logo">Animated</div>
+    <div class="menu">
+      <a href="#">Intro</a>
+      <a href="#">Features</a>
+      <a href="#">Plans</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu(el) {
+      const menu = el.previousElementSibling;
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
